@@ -1,0 +1,17 @@
+Instruções para compilar/correr com vários ficheiros.
+
+0. Colocar #include "manipulation.h" no ficheiro principal.
+1. Compilar os ficheiros auxiliares:			gcc manipulation.c -c -o manipulation
+2. Compilar ficheiro principal com a lib:		gcc maintest.c -o maintest manipulation
+3. Correr executável principal:					./maintest
+
+Ivo ;)
+
+Código todo para compilar:
+
+gcc manipulation.c -c -o manipulation
+gcc configuration.c -c -o configuration manipulation
+gcc receiver.c -c -o receiver manipulation
+gcc transmitter.c -c -o transmitter manipulation
+gcc maintest.c -o maintest manipulation configuration receiver transmitter
+./maintest
